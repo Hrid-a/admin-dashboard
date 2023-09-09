@@ -18,7 +18,7 @@
     }
 
     .chart__details ul {
-        @include mq(large) {
+        @include mq(1200px) {
             align-self: flex-start;
             @include flex-group(start, center);
             gap: 1rem;
@@ -30,7 +30,7 @@
             gap: 0.5rem;
             flex-direction: row;
 
-            @include mq(large) {
+            @include mq(1200px) {
                 flex-direction: column;
             }
 

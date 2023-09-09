@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.container {
+    @include flex-group(start, start);
+    overflow: hidden;
+
+    @include mq(large) {
+        gap: 2rem;
+
+    }
+
+}

@@ -1,0 +1,54 @@
+@use "../abstracts/mixins" as *;
+
+.chart__box {
+    @include flex-group(space-between, flex-start);
+    height: 100%;
+    padding: 1rem;
+
+
+    .box__info {
+        height: 100%;
+        flex: 3;
+        @include flex-group(space-between, start);
+        flex-direction: column;
+
+        .header {
+            @include flex-group(start, center);
+            gap: 0.6rem;
+
+            .title {
+                font-size: 1rem;
+                text-transform: capitalize;
+            }
+        }
+
+        .number {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
+    .chart__info {
+        width: 100%;
+        height: 100%;
+        flex: 2;
+        @include flex-group(space-between, flex-end);
+        flex-direction: column;
+
+        .chart {
+            width: 100%;
+            height: 100%;
+        }
+
+        .chart__details {
+            @include flex-group(space-between, flex-end);
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .percentage {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+    }
+}

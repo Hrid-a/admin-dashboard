@@ -1,0 +1,94 @@
+@use "../abstracts/mixins" as *;
+
+.item {
+    @include flex-group(start, start);
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+
+    @include mq(medium) {
+        flex-direction: row;
+    }
+
+    &__view {
+        max-width: 400px;
+        flex: 1;
+    }
+
+    &__info {
+
+        img {
+            width: 90px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 50%;
+
+        }
+
+        &--personal {
+            @include flex-group(start, center);
+            gap: 1rem;
+            margin-bottom: 2rem;
+
+            .btn {
+                cursor: pointer;
+                padding: 0.5rem 1rem;
+                background-color: rgb(184, 77, 58);
+                color: var(--clr-text-primary);
+                font-size: 1.3rem;
+                font-weight: 600;
+                border-radius: 8px;
+            }
+        }
+    }
+
+
+    &__activities {
+        max-width: 500px;
+        margin-inline-end: auto;
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-block-end: 2rem;
+        }
+
+        div {
+            padding: 1rem;
+
+            @include mq(medium) {
+                border-left: 1px solid rgb(184, 77, 58);
+            }
+
+            p {
+                @include flex-group(start, start);
+                gap: 1rem;
+                flex-direction: column;
+                background-color: rgb(184, 77, 58);
+                margin-block-end: 1rem;
+                padding: 1rem;
+                border-radius: 10px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 20px;
+                    aspect-ratio: 1;
+                    background-color: rgb(184, 77, 58);
+                    position: absolute;
+                    left: -1.65rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-radius: 50%;
+                }
+            }
+
+        }
+    }
+
+
+
+
+
+}

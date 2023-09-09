@@ -1,0 +1,40 @@
+@use "../abstracts/mixins" as *;
+
+.data-table {
+
+    .data-grid {
+
+        background-color: var(--clr-text-primary);
+        padding: 1rem;
+    }
+
+    .action {
+        width: 100%;
+        @include flex-group(center, center);
+        gap: 1rem;
+        cursor: pointer;
+        font-size: 1.4rem;
+
+        .link {
+            color: hsl(120, 58%, 38%);
+
+        }
+
+        span {
+            color: hsla(9, 100%, 64%, 0.74);
+
+        }
+    }
+
+    .MuiDataGrid-toolbarContainer {
+        flex-direction: row-reverse;
+        margin-block-end: 0.5rem;
+    }
+
+    img {
+        width: 45px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

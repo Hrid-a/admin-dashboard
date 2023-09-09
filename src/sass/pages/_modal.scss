@@ -1,0 +1,64 @@
+@use "../abstracts/mixins" as *;
+
+.add {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    @include flex-group(center, center);
+
+    .modal {
+        background-color: var(--clr-primary-bg);
+        padding: 1.5rem;
+        border-radius: 10px;
+        position: relative;
+
+        span {
+            position: absolute;
+            right: 13px;
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            margin-block-end: 1.2rem;
+        }
+
+        form {
+            max-width: 500px;
+            @include flex-group(start, center);
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            .item {
+                @include flex-group(flex-start, flex-start);
+                flex-direction: column;
+                gap: 0.4rem;
+
+                input {
+                    padding: 0.5rem 1rem;
+                    border-radius: 10px;
+                    background-color: #ddd;
+                    color: var(--clr-text-neutral);
+                    font-size: 1rem;
+
+                    &:focus,
+                    &:focus-within {
+                        outline: none;
+                    }
+                }
+            }
+
+            button {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: var(--clr-text-neutral);
+                width: 100%;
+                padding: 0.6rem 1rem;
+                cursor: pointer;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+    }
+}

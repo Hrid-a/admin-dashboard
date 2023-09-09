@@ -1,0 +1,12 @@
+@use "../abstracts/mixins" as *;
+
+.footer {
+
+    @include flex-group(center, center);
+    padding: 1rem;
+
+    ul {
+        @include flex-group(flex-start, center);
+        gap: 3rem;
+    }
+}

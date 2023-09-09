@@ -1,0 +1,51 @@
+@use "../abstracts/mixins" as *;
+
+.pie {
+    width: 100%;
+    height: 100%;
+    @include flex-group(space-between, center);
+    flex-direction: column;
+    padding: 1rem;
+
+    h4 {
+        align-self: flex-start;
+        font-size: 1.2rem;
+    }
+
+    .chart {
+        width: 100%;
+        height: 100%;
+    }
+
+    .chart__details ul {
+        @include mq(large) {
+            align-self: flex-start;
+            @include flex-group(start, center);
+            gap: 1rem;
+
+        }
+
+        li {
+            @include flex-group(start, center);
+            gap: 0.5rem;
+            flex-direction: row;
+
+            @include mq(large) {
+                flex-direction: column;
+            }
+
+            span:first-child {
+                @include flex-group(start, center);
+                gap: 0.5rem;
+            }
+
+            .dot {
+                display: block;
+                width: 16px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+            }
+        }
+    }
+
+}

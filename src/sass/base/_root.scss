@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+:root {
+
+    @each $shade,
+    $shadeMap in $shades {
+
+        @each $variable ,
+        $value in $shadeMap {
+
+            @if $shade ==default {
+
+                --clr-#{$variable}: #{$value};
+            }
+        }
+    }
+
+    --ff-default: "Inter",
+    sans-serif;
+
+}
+
+body {
+    font-family: var(--ff-default);
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--clr-primary-bg, $main-bg);
+    color: var(--clr-text-primary, $main-color);
+}

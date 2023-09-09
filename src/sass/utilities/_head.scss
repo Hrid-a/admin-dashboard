@@ -1,0 +1,13 @@
+@use "../abstracts/mixins" as *;
+
+.head {
+    @include flex-group;
+    gap: 1rem;
+    margin-block-end: 1rem;
+
+    .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
